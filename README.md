@@ -27,13 +27,21 @@
 
 Scheduler has 2 simple tasks:
 - Check for new events in `jobs` table and provision new Kubernetes job depending on job type.
-- Scans given namespace for jobs to be removed and associated resources older than 8 hours.
+- Scans given namespace for jobs and associated resources to be removed older than 8 hours.
 
 I have decided to use [Viper](https://github.com/spf13/viper) for configuration management  
 and [Zerolog](https://github.com/rs/zerolog) for logging. But you can incorporate anything you want.
 Basically I am trying to keep all the configuration clean by using **ENV** vars
 
 ## Setup and Preliminary work
+
+### Kubernetes access: roles and permissions
+
+TBD
+
+### Container
+
+TBD
 
 ### QUEUE
 
