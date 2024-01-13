@@ -55,8 +55,7 @@ In order to keep database connections clean and under limit we listen to the eve
 The following commands were executed using `psql` to create `FUNCTION` that notifies channel.  
 This function does not work by itself so we need a triggers. Currently we depend on `jobs` table  
 in both cases trigger sends a channel simple message to wake listener up. The rest is just a loop.  
-So, at this step assuming you have your database up and running and already created tables  
-we'll create a function:
+So, at this step assuming you have your database up and running we'll create a function for table names `jobs`:
 
 ```SQL
 CREATE OR REPLACE FUNCTION jobs_notifier() RETURNS TRIGGER
